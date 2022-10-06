@@ -20,7 +20,8 @@ class ManagerServiceImplTest {
         Applicant testApplicant = new Applicant("Cobb", Gender.MALE, Qualification.BSC);
         testApplicant.apply();
         String hiringAManager = managerService.hireACashier(manager, testApplicant);
-        assertEquals(testApplicant.getName() + " is now a cashier", hiringAManager);
+        String resultOfHiringAManager = testApplicant.getName() + " is now a cashier";
+        assertEquals(resultOfHiringAManager, hiringAManager);
 
 
     }
