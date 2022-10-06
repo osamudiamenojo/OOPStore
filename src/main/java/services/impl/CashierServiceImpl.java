@@ -23,7 +23,7 @@ public class CashierServiceImpl implements CashierService {
                 customer.addToProductBought(new Product(product.getNameOfProduct(),product.getProductID(), product.getPrice(), 1, product.getCategory()));
                 return "Your order has been delivered";
             }
-            return product.getNameOfProduct() +" not available or insufficient fund " ;
+            return product.getNameOfProduct() +" IS OUT OF STOCK" ;
         }
 
 }
