@@ -21,17 +21,17 @@ class CashierServiceImplTest {
     @Test
     void dispenseReceipt() {
         String whenTestCashierDispensesReceipt = testCashier.dispenseReceipt(testCustomer, testProduct);
-        String expectedResultOfDispensingReceipt = new Receipt(testCustomer.getName(), testProduct.getPrice()).toString();
-        assertEquals(expectedResultOfDispensingReceipt, whenTestCashierDispensesReceipt);
+        String resultOfDispensingReceipt = new Receipt(testCustomer.getName(), testProduct.getPrice()).toString();
+        assertEquals(resultOfDispensingReceipt, whenTestCashierDispensesReceipt);
     }
 
-//    @Test
-//    void sellProduct() {
-//        String whenTestCashierSells = testCashier.sellProduct(testCustomer, testProduct);
-//        String actualResultOfSelling = "Your order has been delivered";
-//
-//
-//        assertEquals(actualResultOfSelling, whenTestCashierSells);
-//
-//    }
+    @Test
+    void sellProduct() {
+        String whenTestCashierSells = testCashier.sellProduct(testCustomer, testProduct);
+        String ResultOfSelling = "Your order has been delivered";
+
+
+        assertEquals(ResultOfSelling, whenTestCashierSells);
+
+    }
 }
