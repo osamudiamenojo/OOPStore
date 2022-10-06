@@ -25,7 +25,7 @@ public class Store {
 
 
 
-    public boolean csvReader(){
+    public String csvReader(){
 
         String path = "/Users/mac/Documents/Decagontask/week-two-sq012-osamudiamenojo/src/main/resources/Products in a Store - Sheet1.csv";
         String line ="";
@@ -45,7 +45,7 @@ public class Store {
             throw new RuntimeException(e);
         }
 
-        return false;
+        return "Store is open";
     }
 
 }

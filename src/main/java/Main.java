@@ -44,8 +44,6 @@ public class Main {
         System.out.println(buyProductResult);
         String dispenseReceiptResult = cashierService.dispenseReceipt(customer1, product1);
         System.out.println(dispenseReceiptResult);
-        System.out.println();
-
 
 
     }

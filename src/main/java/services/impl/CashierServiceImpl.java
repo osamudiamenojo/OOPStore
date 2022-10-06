@@ -17,13 +17,13 @@ public class CashierServiceImpl implements CashierService {
     }
     @Override
     public String sellProduct(Customer customer, Product product){
-            if(product.getNoOfProductAvailable()>0 && (customer.getCashAtHand()).compareTo(product.getPrice())<=0){
+            if(product.getNoOfProductAvailable()>0 && (customer.getCashAtHand()).compareTo(product.getPrice())>=0){
                 customer.setCashAtHand(customer.getCashAtHand().subtract(product.getPrice()));
                 product.setNoOfProductAvailable(product.getNoOfProductAvailable()-1);
                 customer.addToProductBought(new Product(product.getNameOfProduct(),product.getProductID(), product.getPrice(), 1, product.getCategory()));
                 return "Your order has been delivered";
             }
-            return product.getNameOfProduct() +" not available or insufficient fund";
+            return product.getNameOfProduct() +" not available or insufficient fund " ;
         }
 
 }

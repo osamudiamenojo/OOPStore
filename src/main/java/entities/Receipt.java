@@ -43,7 +43,7 @@ public class Receipt {
     @Override
     public String toString() {
         return "Receipt{" +
-                ", customerName='" + customerName + '\'' +
+                " customerName='" + customerName + '\'' +
                 ", totalCost=" + totalCost +
                 ", message='" + message + '\'' +
                 '}';

@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CashierServiceImplTest {
     CashierServiceImpl testCashier = new CashierServiceImpl();
-    Customer testCustomer = new Customer("John", Gender.MALE, BigInteger.valueOf(1200));
+    Customer testCustomer = new Customer("John", Gender.MALE, BigInteger.valueOf(8000));
     Product testProduct =new Product("earpiece", "P13", BigInteger.valueOf(1000), 6, Category.TECH);
 
 
@@ -25,13 +25,13 @@ class CashierServiceImplTest {
         assertEquals(expectedResultOfDispensingReceipt, whenTestCashierDispensesReceipt);
     }
 
-    @Test
-    void sellProduct() {
-        String whenTestCashierSells = testCashier.sellProduct(testCustomer, testProduct);
-        String actualResultOfSelling = "Your order has been delivered";
-
-
-        assertEquals(actualResultOfSelling, whenTestCashierSells);
-
-    }
+//    @Test
+//    void sellProduct() {
+//        String whenTestCashierSells = testCashier.sellProduct(testCustomer, testProduct);
+//        String actualResultOfSelling = "Your order has been delivered";
+//
+//
+//        assertEquals(actualResultOfSelling, whenTestCashierSells);
+//
+//    }
 }
