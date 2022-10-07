@@ -1,7 +1,6 @@
 package entities;
 
 import enums.Gender;
-import services.CustomerService;
 
 import java.math.BigInteger;
 import java.util.ArrayList;

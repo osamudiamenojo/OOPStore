@@ -1,10 +1,10 @@
-package services.impl;
+package service.impl;
 
 import entities.Applicant;
 import entities.Staff;
 import enums.Role;
 import exceptions.ServiceException;
-import services.ManagerService;
+import service.ManagerService;
 
 import java.util.UUID;
 

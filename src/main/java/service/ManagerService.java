@@ -1,4 +1,4 @@
-package services;
+package service;
 
 import entities.Applicant;
 import entities.Staff;

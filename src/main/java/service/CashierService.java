@@ -1,8 +1,7 @@
-package services;
+package service;
 
 import entities.Customer;
 import entities.Product;
-import entities.Receipt;
 
 public interface CashierService {
      String sellProduct(Customer customer, Product product);

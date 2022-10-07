@@ -1,10 +1,10 @@
-package services.impl;
+package service.impl;
 
 import entities.Customer;
 import entities.Product;
 import entities.Receipt;
 import exceptions.ServiceException;
-import services.CashierService;
+import service.CashierService;
 
 public class CashierServiceImpl implements CashierService {
 

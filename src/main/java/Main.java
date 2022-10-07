@@ -3,11 +3,11 @@ import enums.Category;
 import enums.Gender;
 import enums.Qualification;
 import enums.Role;
-import services.CashierService;
-import services.ManagerService;
-import services.impl.CashierServiceImpl;
-import services.impl.CustomerServiceImpl;
-import services.impl.ManagerServiceImpl;
+import service.CashierService;
+import service.ManagerService;
+import service.impl.CashierServiceImpl;
+import service.impl.CustomerServiceImpl;
+import service.impl.ManagerServiceImpl;
 import utils.Store;
 
 import java.math.BigInteger;

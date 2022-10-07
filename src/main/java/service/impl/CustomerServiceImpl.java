@@ -1,8 +1,8 @@
-package services.impl;
+package service.impl;
 
 import entities.Customer;
 import entities.Product;
-import services.CustomerService;
+import service.CustomerService;
 
 public class CustomerServiceImpl implements CustomerService {
 
