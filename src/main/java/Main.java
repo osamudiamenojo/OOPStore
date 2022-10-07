@@ -17,13 +17,13 @@ public class Main {
     private final static ManagerService managerService = new ManagerServiceImpl();
     private final static CashierService cashierService = new CashierServiceImpl();
     private final static CustomerServiceImpl customerService = new CustomerServiceImpl();
-    private final static Store storeInitializer = new Store();
+    private final static Store store = new Store();
 
 
 
     public static void main(String[] args) {
 
-        storeInitializer.csvReader();
+        store.readProductsFromCsvFile();
 
 
 

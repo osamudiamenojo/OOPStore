@@ -10,6 +10,10 @@ public class Customer extends Person{
     private BigInteger cashAtHand;
     private List<Product> productsBought=new ArrayList();
 
+    public Customer() {
+
+    }
+
     public BigInteger getCashAtHand() {
         return cashAtHand;
     }

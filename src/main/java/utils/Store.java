@@ -25,7 +25,7 @@ public class Store {
 
 
 
-    public String csvReader(){
+    public String readProductsFromCsvFile(){
 
         String path = "/Users/mac/Documents/Decagontask/week-two-sq012-osamudiamenojo/src/main/resources/Products in a Store - Sheet1.csv";
         String line ="";

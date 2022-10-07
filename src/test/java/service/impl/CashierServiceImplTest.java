@@ -5,18 +5,28 @@ import entities.Product;
 import entities.Receipt;
 import enums.Category;
 import enums.Gender;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import utils.Store;
 
 import java.math.BigInteger;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class CashierServiceImplTest {
-    CashierServiceImpl testCashier = new CashierServiceImpl();
-    Customer testCustomer = new Customer("John", Gender.MALE, BigInteger.valueOf(8000));
-    Product testProduct =new Product("earpiece", "P13", BigInteger.valueOf(1000), 6, Category.TECH);
+    Store storeInitializer;
+    CashierServiceImpl testCashier;
+    Customer testCustomer;
+    Product testProduct;
 
-
+    @BeforeEach
+    void setUp() {
+        testCashier = new CashierServiceImpl();
+        storeInitializer=new Store();
+        storeInitializer.csvReader();
+        testCustomer = new Customer("John", Gender.MALE, BigInteger.valueOf(8000));
+        testProduct =new Product("earpiece", "P13", BigInteger.valueOf(1000), 6, Category.TECH);
+    }
 
     @Test
     void dispenseReceipt() {
@@ -27,10 +37,8 @@ class CashierServiceImplTest {
 
     @Test
     void sellProduct() {
-        String whenTestCashierSells = testCashier.sellProduct(testCustomer, testProduct);
+        String whenTestCashierSells = testCashier.sellProduct(testCustomer, testProduct, storeInitializer);
         String ResultOfSelling = "Your order has been delivered";
-
-
         assertEquals(ResultOfSelling, whenTestCashierSells);
 
     }
