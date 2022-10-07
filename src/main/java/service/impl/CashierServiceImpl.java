@@ -17,6 +17,7 @@ public class CashierServiceImpl implements CashierService {
     }
     @Override
     public String sellProduct(Customer customer, Product product){
+        if(customer == null|| product == null) throw new ServiceException("customer or product cannot be null");
             if(product.getNoOfProductAvailable()>0 && (customer.getCashAtHand()).compareTo(product.getPrice())>=0){
                 customer.setCashAtHand(customer.getCashAtHand().subtract(product.getPrice()));
                 product.setNoOfProductAvailable(product.getNoOfProductAvailable()-1);
